@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>Puerto Serena — Neon Tide</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #0a0e16;
+    height: 100%;
+    overflow: hidden;
+    font-family: "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+  }
+  #wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  canvas {
+    width: min(100vw, 160vh);
+    height: auto;
+    aspect-ratio: 1280 / 800;
+    background: #14607f;
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.6);
+    cursor: crosshair;
+  }
+</style>
+</head>
+<body>
+<div id="wrap">
+  <canvas id="game" width="1280" height="800"></canvas>
+</div>
+<script type="module">
+  import { bootGame } from './src/main.js';
+  bootGame();
+</script>
+</body>
+</html>
